@@ -2,13 +2,14 @@
 #include <Windows.h>
 #include <fstream>
 #include <String>
+#include <ctime>
 using namespace std;
 
 //universal//
  void displayCard();
  void cardsplit();
  void player1();
- void palyer2();
+ void player2();
  
 //loading
 void loadingScreen(){
@@ -54,138 +55,400 @@ void cardsplit(){
     cout<<"================Building Deck==============="<<endl;
     cout<<"============================================"<<endl;
     //deciding which card to use//
-    for(int i = 1; i<=30; ++i){
        player1();
-       player2();
-    }
+       //player2();//
+    
 
 }
 
 void player1(){
    string input;
+   string line;
    int numb;
-   ofstream one("player1.txt");
-   numb = rand()%30 +1;
-        if(numb = 1){
-           input = "Admiral";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 2){
+   fstream one("player1.txt");
+   srand(time(0));
+  // numb = 1+(rand()%30);//
+  numb = 1;
+   cout<<numb;
+        if(numb = 1; ++numb){
+           input = numb +" Admiral";
+               if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                        
+                     }
+                  }
+               }if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) == string::npos){
+                        one<<input;
+                     }
+                  }
+               }
+        }if(numb == 2){
            input = "General";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 3){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) == string::npos){
+                        one<<input;
+                     }
+                  }
+               }
+        }if(numb == 3){
            input = "Colonel";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 4){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) == string::npos){
+                        one<<input;
+                     }
+                  }
+               }
+        }if(numb == 4){
            input = "Colonel";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 5){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) == string::npos){
+                        one<<input;
+                     }
+                  }
+               }
+        }if(numb == 5){
            input = "Major";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 6){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) == string::npos){
+                        one<<input;
+                     }
+                  }
+               }
+        }if(numb == 6){
            input = "Major";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 7){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) == string::npos){
+                        one<<input;
+                     }
+                  }
+               }
+        }if(numb == 7){
            input = "Captain";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 8){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 8){
            input = "Captain";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 9){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 9){
            input = "Lieutenant";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 10){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 10){
            input = "Lieutenant";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 11){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 11){
            input = "Sergeant";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 12){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 12){
            input = "Sergeant";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 13){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 13){
            input = "Sergeant";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 14){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 14){
            input = "Sergeant";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 15){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 15){
            input = "Corporal";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 16){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 16){
            input = "Corporal";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 17){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 17){
            input = "Corporal";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 18){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 18){
            input = "Corporal";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 19){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 19){
            input = "Corporal";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 20){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 20){
            input = "Corporal";
-           one<<numb<<" ";
-            one<<input<<endl;
-        }if(numb = 21){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 21){
            input = "Private";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 22){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 22){
            input = "Private";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 23){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 23){
            input = "Private";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 24){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 24){
            input = "Private";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 25){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 25){
            input = "Private";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 26){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 26){
            input = "Private";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 27){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 27){
            input = "Private";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 28){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 28){
            input = "Private";
-            one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 29){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
+        }if(numb == 29){
            input = "Private";
-           one<<numb<<" ";
-           one<<input<<endl;
-        }if(numb = 30){
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  };
+        }if(numb == 30){
            input = "Private";
-           one<<numb<<" ";
-           one<<input<<endl;
+           if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) != string::npos){
+                        player1();
+                     }
+                  }
+               }else {
+                  one<<numb<<" ";
+                  one<<input<<endl;
+                  }
         }
 }
 void player2(){
