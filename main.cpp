@@ -62,26 +62,78 @@ void cardsplit(){
 }
 
 void player1(){
+   string input = "empty";
+   string line;
+   int numb = 1;
+   fstream one("player1.txt", ios::out | ios::app);
+   srand(time(0));
+   //numb = 1+(rand()%30);//
+
+
+   while(input == "empty"){
+         if(numb = 1){
+            input = numb + " Admiral";
+         }if(numb = 2){
+            input = numb + " Genral";
+         }if(numb = 3){
+            input = numb + " Colonel";
+         }if(numb = 4){
+            input = numb + " Colonel";
+         }if(numb = 5){
+            input = numb + " Major";
+         }if(numb = 6){
+            input = numb + " Major";
+         }if(numb = 7){
+            input = numb + " Captian";
+         }if(numb = 8){
+            input = numb + " Captian";
+         }if(numb = 9){
+            input = numb + " Liutenant";
+         }if(numb = 10){
+            input = numb + " Liutenant";
+         }if(numb = 11){
+            input = numb + " Sergeant";
+         }if(numb = 12){
+            input = numb + " Sergeant";
+         }if(numb = 13){
+            input = numb + " Sergeant";
+         }if(numb = 14){
+            input = numb + " Sergeant";
+         }
+}
+
+   if(input == numb + " General"){
+      if (one.is_open()){
+                  while(getline(one, line)){
+                     if(line.find(input) == string::npos){
+                        one<<input;
+                     }
+                  }
+      }
+   }
+}
+
+/*void player1(){
    string input;
    string line;
    int numb;
-   fstream one("player1.txt");
+   fstream one("player1.txt", ios::out | ios::app);
    srand(time(0));
   // numb = 1+(rand()%30);//
   numb = 1;
    cout<<numb;
         if(numb = 1; ++numb){
-           input = numb +" Admiral";
+           string input = numb +" Admiral";
                if (one.is_open()){
                   while(getline(one, line)){
-                     if(line.find(input) != string::npos){
-                        player1();
+                     if(line.find("Admiral") != string::npos){
+                        one<<input;
                         
                      }
                   }
                }if (one.is_open()){
                   while(getline(one, line)){
-                     if(line.find(input) == string::npos){
+                     if(line.find("Admiral") == string::npos){
                         one<<input;
                      }
                   }
@@ -577,7 +629,7 @@ void player2(){
            two<<numb<<" ";
            two<<input<<endl;
         }
-}
+}*/
 
 
 int main(){
